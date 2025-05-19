@@ -1,10 +1,25 @@
+import { Fragment } from "react/jsx-runtime";
+
 function Card() {
-  const width = {
-    width: "500px",
-  };
   return (
-    <div className="card" style={width}>
+    <div
+      className="card"
+      style={{
+        width: "500px",
+      }}
+    >
       <h5 className="card-header">Featured</h5>
+      <div className="card-body">
+        <CardBody />
+      </div>
+    </div>
+  );
+}
+export default Card;
+
+export function CardBody() {
+  return (
+    <Fragment>
       <div className="card-body">
         <h5 className="card-title">Special title treatment</h5>
         <p className="card-text">
@@ -14,7 +29,6 @@ function Card() {
           Go somewhere
         </a>
       </div>
-    </div>
+    </Fragment>
   );
 }
-export default Card;
